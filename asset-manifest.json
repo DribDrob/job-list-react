@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/job-list-react/static/css/main.e6c13ad2.css",
+    "main.js": "/job-list-react/static/js/main.73ceccdd.js",
+    "static/js/765.5c1c2b59.chunk.js": "/job-list-react/static/js/765.5c1c2b59.chunk.js",
+    "static/js/684.c5baf37d.chunk.js": "/job-list-react/static/js/684.c5baf37d.chunk.js",
+    "index.html": "/job-list-react/index.html",
+    "main.e6c13ad2.css.map": "/job-list-react/static/css/main.e6c13ad2.css.map",
+    "main.73ceccdd.js.map": "/job-list-react/static/js/main.73ceccdd.js.map",
+    "765.5c1c2b59.chunk.js.map": "/job-list-react/static/js/765.5c1c2b59.chunk.js.map",
+    "684.c5baf37d.chunk.js.map": "/job-list-react/static/js/684.c5baf37d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.73ceccdd.js"
+  ]
+}
