@@ -18,7 +18,7 @@ const JobItem = ({ url, location, jobData }) => {
       </div>
       <p>Rate</p>
       <div>
-        <p>Bookmark</p>
+        {/* <p>Bookmark</p> */}
         <p>{`Posted ${createdAt}`}</p>
       </div>
     </li>
