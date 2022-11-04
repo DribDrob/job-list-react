@@ -7,6 +7,7 @@ import { getJobById } from 'services/api/jobsAPI';
 import { ReactComponent as BookmarkIcon } from 'icons/bookmark.svg';
 import { ReactComponent as ShareIcon } from 'icons/share.svg';
 import { getNumberDaysBetweenDates } from 'services/getNumberDaysBetweenDates';
+import { convertSalaryFormat } from 'services/convertSalaryFormat';
 
 const JobDetailed = () => {
   const [jobDetails, setjobDetails] = useState(null);
@@ -43,7 +44,7 @@ const JobDetailed = () => {
   } = jobDetails;
   const currentDay = Date.now();
   const postedDaysAgo = getNumberDaysBetweenDates(createdAt, currentDay);
-
+  const changedFormatSalary = convertSalaryFormat(salary);
   return (
     <main>
       <div>
@@ -64,7 +65,7 @@ const JobDetailed = () => {
             <div>
               <h3>{title}</h3>
               <div>
-                <p>{salary}</p>
+                <p>{`€ ${changedFormatSalary}`}</p>
                 <p>Brutto, per year</p>
               </div>
               <p>{`Posted ${postedDaysAgo} days ago`}</p>
