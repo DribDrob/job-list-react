@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 // import { toast } from 'react-toastify';
 // import 'react-toastify/dist/ReactToastify.css';
-import { getAllJobs } from 'services/jobsAPI';
+import { getAllJobs } from 'services/api/jobsAPI';
 // import { Loader } from 'components/Loader/Loader';
 import JobsList from 'components/JobsList/JobsList';
 

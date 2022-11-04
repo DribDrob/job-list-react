@@ -1,7 +1,14 @@
 import { Link } from 'react-router-dom';
+import { ReactComponent as BookmarkIcon } from 'icons/bookmark.svg';
+import { ReactComponent as LocationIcon } from 'icons/location.svg';
+import { getNumberDaysBetweenDates } from 'services/getNumberDaysBetweenDates';
+import RatingStars from 'components/RatingStars/RatingStars';
 
 const JobItem = ({ url, location, jobData }) => {
   const { id, pictures, title, address, createdAt } = jobData;
+  const currentDay = Date.now();
+  const postedDaysAgo = getNumberDaysBetweenDates(createdAt, currentDay);
+
   return (
     <li>
       <img src={pictures[0]} alt={title} width="85" />
@@ -11,14 +18,16 @@ const JobItem = ({ url, location, jobData }) => {
         </Link>
         <p>Department name • Allgemeines Krankenhaus der Stadt Wien - AKH</p>
         <div>
-          <p>Icon</p>
+          <LocationIcon />
           <p>{address}</p>
         </div>
       </div>
-      <p>Rate</p>
+      <RatingStars />
       <div>
-        <p>Bookmark</p>
-        <p>{`Posted ${createdAt}`}</p>
+        <button type="button">
+          <BookmarkIcon />
+        </button>
+        <p>{`Posted ${postedDaysAgo} days ago`}</p>
       </div>
     </li>
   );

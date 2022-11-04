@@ -3,7 +3,10 @@ import { useParams, useLocation } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { BackLink } from '../components/BackLink/BackLink';
-import { getJobById } from 'services/jobsAPI';
+import { getJobById } from 'services/api/jobsAPI';
+import { ReactComponent as BookmarkIcon } from 'icons/bookmark.svg';
+import { ReactComponent as ShareIcon } from 'icons/share.svg';
+import { getNumberDaysBetweenDates } from 'services/getNumberDaysBetweenDates';
 
 const JobDetailed = () => {
   const [jobDetails, setjobDetails] = useState(null);
@@ -38,6 +41,8 @@ const JobDetailed = () => {
     employment_type: empType,
     description,
   } = jobDetails;
+  const currentDay = Date.now();
+  const postedDaysAgo = getNumberDaysBetweenDates(createdAt, currentDay);
 
   return (
     <main>
@@ -46,20 +51,26 @@ const JobDetailed = () => {
           <div>
             <div>
               <h2>Job Details</h2>
-              <button>Save to my list</button>
-              <button>Share</button>
+              <button type="button">
+                <BookmarkIcon />
+                Save to my list
+              </button>
+              <button type="button">
+                <ShareIcon />
+                Share
+              </button>
             </div>
-            <button>Apply now</button>
+            <button type="button">Apply now</button>
             <div>
               <h3>{title}</h3>
               <div>
                 <p>{salary}</p>
                 <p>Brutto, per year</p>
               </div>
-              <p>`Posted ${createdAt} days ago`</p>
+              <p>{`Posted ${postedDaysAgo} days ago`}</p>
               <p>{description}</p>
             </div>
-            <button>Apply now</button>
+            <button type="button">Apply now</button>
             <h2>Additional info</h2>
             <p>Employment type</p>
             <div>
