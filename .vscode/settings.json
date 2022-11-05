@@ -1,2 +1,10 @@
 {
+    "files.associations": {
+    "*.scss": "postcss", "*.module.scss": "postcss", "*.css": "postcss"
+  },
+  
+  "emmet.includeLanguages": {
+    "postcss": "css"
+  }
+
 }
