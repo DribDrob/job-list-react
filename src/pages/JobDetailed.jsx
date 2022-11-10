@@ -42,9 +42,11 @@ const JobDetailed = () => {
     employment_type: empType,
     description,
   } = jobDetails;
+
   const currentDay = Date.now();
   const postedDaysAgo = getNumberDaysBetweenDates(createdAt, currentDay);
   const changedFormatSalary = convertSalaryFormat(salary);
+
   return (
     <main>
       <div>

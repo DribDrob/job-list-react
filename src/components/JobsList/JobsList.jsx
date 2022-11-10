@@ -3,7 +3,7 @@ import JobItem from 'components/JobItem/JobItem';
 
 const JobsList = ({ data, url, location }) => {
   return (
-    <ul>
+    <ul className="">
       {data.map(jobData => {
         return (
           <JobItem

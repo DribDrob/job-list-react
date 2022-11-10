@@ -9,10 +9,11 @@ const RatingStars = () => {
 
   return (
     <ReactStars
+      className="min-w-24 mr-8 flex"
       count={5}
       onChange={ratingChanged}
       size={24}
-      color2={'#ffd700'}
+      color2={'#384564'}
       half={false}
     />
   );

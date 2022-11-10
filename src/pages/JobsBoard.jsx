@@ -28,7 +28,13 @@ const JobsBoard = () => {
   }, []);
 
   return (
-    <main>{jobs && <JobsList data={jobs} url="" location={location} />}</main>
+    <main>
+      <section className="w-full bg-gray-light py-4 font-proxima text-base text-gray">
+        <div className="mx-auto -mb-2 mt-0 max-w-screen-xl px-4">
+          {jobs && <JobsList data={jobs} url="" location={location} />}
+        </div>
+      </section>
+    </main>
   );
 };
 
