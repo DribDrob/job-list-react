@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 export const BackLink = ({ to, children }) => {
   return (
-    <Link to={to}>
+    <Link className="flex" to={to}>
       <FiChevronLeft size="18" />
       {children}
     </Link>

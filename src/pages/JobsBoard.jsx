@@ -29,8 +29,8 @@ const JobsBoard = () => {
 
   return (
     <main>
-      <section className="w-full bg-gray-light py-4 font-proxima text-base text-gray">
-        <div className="mx-auto -mb-2 mt-0 max-w-screen-xl px-4">
+      <section className="w-full bg-gray-light pt-[29px] pb-16 font-proxima text-base text-gray">
+        <div className="mx-auto -mb-2 mt-0 max-w-[1432px] px-4">
           {jobs && <JobsList data={jobs} url="" location={location} />}
         </div>
       </section>

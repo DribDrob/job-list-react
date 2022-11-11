@@ -4,10 +4,10 @@ module.exports = {
   theme: {
     screens: {
       sm: '414px',
-      xl: '1432px',
+      xl: '1920px',
     },
     fontFamily: {
-      sans: ['Roboto', 'sans-serif'],
+      roboto: ['Roboto', 'sans-serif'],
       proxima: ['Proxima Nova', 'sans-serif'],
     },
     colors: {
@@ -26,13 +26,16 @@ module.exports = {
 
     extend: {
       spacing: {
-        // 1: '8px',
-        // 2: '12px',
+        '18px': '18px',
+        '30px': '30px',
         '68px': '68px',
         '26px': '26px',
         '29px': '29px',
+        '56px': '56px',
         '85px': '85px',
+        '162px': '162px',
         '260px': '260px',
+        '1432px': '1432px',
       },
       borderRadius: {
         round: '50%',
