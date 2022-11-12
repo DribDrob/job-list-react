@@ -1,12 +1,15 @@
-const Button = ({ children }) => {
+import PropTypes from 'prop-types';
+
+const Button = ({ styles, children }) => {
   return (
-    <button
-      className="rounded-lg bg-accent py-[18px] px-[30px] font-proxima text-white"
-      type="button"
-    >
+    <button className={styles} type="button">
       {children}
     </button>
   );
 };
 
 export default Button;
+
+Button.propTypes = {
+  styles: PropTypes.string,
+};

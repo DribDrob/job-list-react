@@ -1,6 +1,4 @@
 import ReactStars from 'react-stars';
-// import React from 'react'
-// import { render } from 'react-dom'
 
 const RatingStars = () => {
   const ratingChanged = newRating => {
