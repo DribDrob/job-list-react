@@ -68,7 +68,7 @@ const JobInfo = () => {
             </button>
             <button className="flex items-center" type="button">
               <ShareIcon className="mr-4" />
-              Share
+              Shar
             </button>
           </div>
           <Button styles="mb-8 rounded-lg bg-accent py-[18px] px-[30px] font-proxima text-white">
